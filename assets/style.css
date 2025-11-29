@@ -175,10 +175,11 @@ body {
 .even-column {
   display: grid;
   gap: 1rem;
-}
-@media (width >50em) {
-  .even-column {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+  
+  @media (width >50em) {
+   
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+    
   }
 }
