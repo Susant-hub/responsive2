@@ -10,34 +10,49 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />  `
+    />
+    `
   </head>
   <body>
     <header class="primary-header">
       <div class="container">
-        <a href=""><img src="./assets/images/logo.svg" /></a>
-        <nav class="primary-navigation">
-          <ul role="list">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="btn">Get Started</button>
+        <div class="nav-wrapper">
+          <a href=""><img src="./assets/images/logo.svg" /></a>
+          <button class="mobile-nav">
+            <img
+              src="./assets/images/icon-hamburger.svg"
+              alt=""
+              class="nav-icon-hamburger"
+            />
+            <img
+              src="./assets/images/icon-close.svg"
+              alt=""
+              class="nav-icon-close"
+            />
+          </button>
+          <nav class="primary-navigation">
+            <ul role="list">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button nav-button">Get Started</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero-section">
+      <section class="padding-block-900 hero-section">
         <div class="container">
           <div class="even-column">
-            <div>
+            <div class="flow-large">
               <h1 class="fs-primary-heading fw-bold">
                 Bring everyone together to build better products
               </h1>
-              <p>
+              <p data-width="narrow">
                 Manage makes it simple for software teams to plan day-to-day
                 tasks while keeping the larger team goals in view.
               </p>
@@ -50,43 +65,43 @@
         </div>
       </section>
 
-      <section>
+      <section class="about padding-block-900">
         <div class="container">
           <div class="even-column">
-            <div>
+            <div class="flow-large">
               <h2 class="fs-secondary-heading fw-bold">
                 Whats different about manage?
               </h2>
-              <p>
+              <p data-width="narrow">
                 Manage provides all the functionality your team needs, without
                 the complexity. Our software is tailor-made for modern digital
                 product teams
               </p>
             </div>
-            <div>
+            <div class="flow-large">
               <ul class="numbered-titles">
-                <li>
+                <li class="flow-small">
                   <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
-                  <p>
+                  <p data-width="wide">
                     See how your day-to-day tasks fit into the wider vision. Go
                     from tracking progress at the milestone level all the way
                     done to the smallest of details. Never lose sight of the
                     bigger picture again.
                   </p>
                 </li>
-                <li>
+                <li class="flow-small">
                   <h3 class="fs-600 fw-bold">Advanced built-in reports</h3>
-                  <p>
+                  <p data-width="wide">
                     Set internal delivery estimates and track progress toward
                     company goals. Our customisable dashboard helps you build
                     out the reports you need to keep key stakeholders informed.
                   </p>
                 </li>
-                <li>
+                <li class="flow-small">
                   <h3 class="fs-600 fw-bold">
                     Everything you need in one place
                   </h3>
-                  <p>
+                  <p data-width="wide">
                     Stop jumping from one service to another to communicate,
                     store files, track tasks and share documents. Manage offers
                     an all-in-one team productivity solution.
@@ -98,34 +113,34 @@
         </div>
       </section>
 
-      <section class="carousel">
-        <div class="container">
-          <h2>What they've said</h2>
+      <section class="padding-block-700 carousel">
+        <div class="container flow-large">
+          <h2 class="fs-primary-heading fw-bold">What they've said</h2>
           <!-- Carousel -->
-          <button>Get Started</button>
+          <button class="button">Get Started</button>
         </div>
       </section>
 
-      <section class="bg-accent-400 text-neutral-100">
+      <section class="cta padding-block-700 bg-accent-400 text-neutral-100">
         <div class="container">
-          <div class="even-column">
+          <div class="even-column cta-items">
             <div>
               <h2 class="fs-secondary-heading fw-bold">
                 Simplify how your team works today
               </h2>
             </div>
             <div>
-              <button class="button white-button">Get Started</button>
+              <button class="button" data-type="inverted">Get Started</button>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100">
+    <footer class="bg-neutral-900 text-neutral-100 padding-block-900">
       <div class="container">
         <div class="even-column">
-          <div>
+          <div class="flow-small">
             <a href="#"><img src="./assets/images/logo.svg" alt="" /></a>
             <ul role="list">
               <li>
@@ -157,7 +172,7 @@
           </div>
           <div>
             <nav class="footer-nav">
-              <ul role="list">
+              <ul role="list" class="flow-small">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Products</a></li>
@@ -168,14 +183,16 @@
               </ul>
             </nav>
           </div>
-          <form action="">
+          <form action="" class="flow-small">
             <input type="email" placeholder="johnmadden/mail" />
-            <button>Go</button>
+            <button class="button">Go</button>
             <p>Copyright 2020. All Rights Reserved</p>
           </form>
           <div></div>
         </div>
       </div>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
