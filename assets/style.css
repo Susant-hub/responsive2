@@ -122,6 +122,9 @@ svg {
 .text-neutral-100 {
   color: var(--clr-neutral-100);
 }
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
 .text-neutral-900 {
   color: var(--clr-neutral-900);
 }
@@ -181,7 +184,7 @@ svg {
 }
 
 .container {
-  --_max-width: 1110px;
+  --_max-width: 1200px;
   --_padding: var(--spacing-400);
 
   padding: var(--_padding);
@@ -297,6 +300,7 @@ p[data-width="narrow"] {
   color: var(--clr-neutral-100);
   box-shadow: 0 1rem 1rem -1rem var(--clr-neutral-900);
   transition: ease-in-out 0.1s;
+  font-size: var(--fs-button);
 }
 .button:hover {
   opacity: 0.75;
@@ -313,13 +317,12 @@ p[data-width="narrow"] {
 
 .cta-items {
   padding: 1rem;
-  text-align: center;
 }
 .cta {
   position: relative;
   isolation: isolate;
 }
-.cta::after {
+.cta::before {
   content: "";
   background-image: url(./images/bg-tablet-pattern.svg),
     url(./images/bg-tablet-pattern.svg);
@@ -332,7 +335,75 @@ p[data-width="narrow"] {
 }
 
 @media (width < 50em) {
+  .cta-items {
+    text-align: center;
+  }
   .cta-items > *:last-child {
     justify-self: center;
+  }
+}
+
+/* -----footer----- */
+.footer-nav {
+  columns: 2;
+  gap: min(var(--spacing-900), 2rem);
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--clr-accent-100);
+  font-size: var(--fs-nav);
+}
+.footer-nav a:hover {
+  color: var(--clr-accent-400);
+}
+.footer-logos {
+  display: grid;
+  gap: var(--spacing-650);
+}
+.social-icons {
+  display: flex;
+  gap: var(--spacing-400);
+  align-items: baseline;
+}
+.footer-form input {
+  padding: var(--spacing-400);
+  border-radius: var(--spacing-800);
+  border: none;
+}
+.footer-form input::placeholder {
+  color: var(--clr-accent-400);
+}
+
+@media (width<50em) {
+  .footer-logos {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer-wrapper > :nth-child(1) {
+    grid-area: icons;
+  }
+  .footer-wrapper > :nth-child(2) {
+    grid-area: nav-lists;
+  }
+  .footer-wrapper > :nth-child(3) {
+    grid-area: form;
+  }
+  .footer-wrapper {
+    display: grid;
+    grid-template-areas:
+      "form"
+      "nav-lists"
+      "icons";
+    justify-items: center;
+    gap: var(--spacing-700);
+  }
+  .footer-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .copyright {
+    text-align: center;
   }
 }
