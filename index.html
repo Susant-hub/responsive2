@@ -15,82 +15,110 @@
   <body>
     <header class="primary-header">
       <div class="container">
-        <a href=""><img src="./assets/images/logo.svg" /></a>
-        <nav class="primary-navigation">
-          <ul role="list">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="btn">Get Started</button>
+        <div class="nav-wrapper">
+          <a href=""><img src="./assets/images/logo.svg" /></a>
+          <button class="mobile-nav">
+            <img
+              src="./assets/images/icon-hamburger.svg"
+              alt=""
+              class="nav-icon-hamburger"
+            />
+            <img
+              src="./assets/images/icon-close.svg"
+              alt=""
+              class="nav-icon-close"
+            />
+          </button>
+          <nav class="primary-navigation">
+            <ul role="list">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button nav-button">Get Started</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero-section">
+      <section class="hero-section padding-block-900">
         <div class="container">
-          <div class="even-column">
-            <div>
+          <div class="text-center-small even-column">
+            <div class="flow-large">
               <h1 class="fs-primary-heading fw-bold">
                 Bring everyone together to build better products
               </h1>
-              <p>
+              <p data-width="narrow">
                 Manage makes it simple for software teams to plan day-to-day
                 tasks while keeping the larger team goals in view.
               </p>
               <button class="button">Get Started</button>
             </div>
-            <div>
+            <div class="hero-image margin-auto">
               <img src="./assets/images/illustration-intro.svg" />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="about padding-block-900">
         <div class="container">
           <div class="even-column">
-            <div>
+            <div class="flow-small text-center-small">
               <h2 class="fs-secondary-heading fw-bold">
                 Whats different about manage?
               </h2>
-              <p>
+              <p data-width="narrow">
                 Manage provides all the functionality your team needs, without
                 the complexity. Our software is tailor-made for modern digital
                 product teams
               </p>
             </div>
-            <div>
-              <ul class="numbered-titles">
+            <div class="flow-large">
+              <ul class="numbered-items">
                 <li>
-                  <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
-                  <p>
-                    See how your day-to-day tasks fit into the wider vision. Go
-                    from tracking progress at the milestone level all the way
-                    done to the smallest of details. Never lose sight of the
-                    bigger picture again.
-                  </p>
+                  <div class="numbered-items-wrapper flow-small">
+                    <span class="numbered-items-numbering">01</span>
+                    <h3 class="numbered-items-heading fs-600 fw-bold">
+                      Track company-wide progress
+                    </h3>
+                    <p class="numbered-items-body" data-width="wide">
+                      See how your day-to-day tasks fit into the wider vision.
+                      Go from tracking progress at the milestone level all the
+                      way done to the smallest of details. Never lose sight of
+                      the bigger picture again.
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <h3 class="fs-600 fw-bold">Advanced built-in reports</h3>
-                  <p>
-                    Set internal delivery estimates and track progress toward
-                    company goals. Our customisable dashboard helps you build
-                    out the reports you need to keep key stakeholders informed.
-                  </p>
+                  <div class="numbered-items-wrapper flow-small">
+                    <span class="numbered-items-numbering">02</span>
+                    <h3 class="numbered-items-heading fw-bold">
+                      Advanced built-in reports
+                    </h3>
+                    <p class="numbered-items-body" data-width="wide">
+                      Set internal delivery estimates and track progress toward
+                      company goals. Our customisable dashboard helps you build
+                      out the reports you need to keep key stakeholders
+                      informed.
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <h3 class="fs-600 fw-bold">
-                    Everything you need in one place
-                  </h3>
-                  <p>
-                    Stop jumping from one service to another to communicate,
-                    store files, track tasks and share documents. Manage offers
-                    an all-in-one team productivity solution.
-                  </p>
+                  <div class="numbered-items-wrapper flow-small">
+                    <span class="numbered-items-numbering">03</span>
+                    <h3 class="numbered-items-heading fw-bold">
+                      Everything you need in one place
+                    </h3>
+                    <p class="numbered-items-body" data-width="wide">
+                      Stop jumping from one service to another to communicate,
+                      store files, track tasks and share documents. Manage
+                      offers an all-in-one team productivity solution.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -98,36 +126,86 @@
         </div>
       </section>
 
-      <section class="carousel">
-        <div class="container">
-          <h2>What they've said</h2>
-          <!-- Carousel -->
-          <button>Get Started</button>
+      <section class="padding-block-700 carousel">
+        <div class="text-center container flow-large">
+          <h2 class="fs-primary-heading fw-bold">What they've said</h2>
+          <div class="testimonials">
+            <ul class="testimonials-list">
+              <li class="testimonial flow-large">
+                <img
+                  class="testimonials-image"
+                  src="./assets/images/avatar-anisha.png"
+                  alt=""
+                />
+                <div class="testimonials-text flow-small">
+                  <h3 class="testimonials-name fs-400 fw-bold">Anisha Li</h3>
+                  <p class="testimonials-body fs-300">
+                    “Manage has supercharged our team’s workflow. The ability to
+                    maintain visibility on larger milestones at all times keeps
+                    everyone motivated.”
+                  </p>
+                </div>
+              </li>
+              <li class="testimonial flow-large">
+                <img
+                  class="testimonials-image"
+                  src="./assets/images/avatar-ali.png"
+                  alt=""
+                />
+                <div class="testimonials-text flow-small">
+                  <h3 class="testimonials-name fs-400 fw-bold">Ali Bravo</h3>
+                  <p class="testimonials-body fs-300">
+                    “We have been able to cancel so many other subscriptions
+                    since using Manage. There is no more cross-channel confusion
+                    and everyone is much more focused.”
+                  </p>
+                </div>
+              </li>
+              <li class="testimonial flow-large">
+                <img
+                  class="testimonials-image"
+                  src="./assets/images/avatar-richard.png"
+                  alt=""
+                />
+                <div class="testimonials-text flow-small">
+                  <h3 class="testimonials-name fs-400 fw-bold">
+                    Richard Watts
+                  </h3>
+                  <p class="testimonials-body fs-300">
+                    “Manage allows us to provide structure and process. It keeps
+                    us organized and focused. I can’t stop recommending them to
+                    everyone I talk to!”
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="button">Get Started</button>
         </div>
       </section>
 
-      <section class="bg-accent-400 text-neutral-100">
+      <section class="cta padding-block-700 bg-accent-400 text-neutral-100">
         <div class="container">
-          <div class="even-column">
+          <div class="even-column cta-items">
             <div>
               <h2 class="fs-secondary-heading fw-bold">
                 Simplify how your team works today
               </h2>
             </div>
             <div>
-              <button class="button white-button">Get Started</button>
+              <button class="button" data-type="inverted">Get Started</button>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100">
+    <footer class="bg-neutral-900 text-neutral-100 padding-block-900">
       <div class="container">
-        <div class="even-column">
-          <div>
+        <div class="even-column footer-wrapper">
+          <div class="flow-small footer-logos">
             <a href="#"><img src="./assets/images/logo.svg" alt="" /></a>
-            <ul role="list">
+            <ul role="list" class="social-icons">
               <li>
                 <a href="#"
                   ><img src="./assets/images/icon-facebook.svg" alt=""
@@ -157,7 +235,7 @@
           </div>
           <div>
             <nav class="footer-nav">
-              <ul role="list">
+              <ul role="list" class="flow-small">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Products</a></li>
@@ -168,14 +246,17 @@
               </ul>
             </nav>
           </div>
-          <form action="">
+          <form action="" class="flow-small footer-form">
             <input type="email" placeholder="johnmadden/mail" />
-            <button>Go</button>
-            <p>Copyright 2020. All Rights Reserved</p>
+            <button class="button" data="go">Go</button>
           </form>
-          <div></div>
         </div>
+        <p class="fs-300 text-neutral-400 copyright">
+          Copyright 2020. All Rights Reserved
+        </p>
       </div>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
