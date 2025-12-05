@@ -129,6 +129,9 @@ svg {
   color: var(--clr-neutral-900);
 }
 
+.text-center {
+  text-align: center;
+}
 @media (width<=50em) {
   .text-center-small {
     text-align: center;
@@ -192,6 +195,10 @@ svg {
   padding-block: var(--spacing-900);
 }
 
+.margin-auto {
+  margin-inline: auto;
+}
+
 .container {
   --_max-width: 1200px;
   --_padding: var(--spacing-400);
@@ -233,6 +240,7 @@ p[data-width="narrow"] {
 
 /* Navigation */
 .nav-wrapper {
+  padding-top: var(--spacing-600);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,9 +269,9 @@ p[data-width="narrow"] {
   .mobile-nav {
     display: block;
     position: fixed;
-    top: var(--spacing-650);
+    top: var(--spacing-700);
     right: var(--spacing-500);
-    z-index: 100;
+    z-index: 999;
   }
   .primary-navigation,
   .nav-button {
@@ -275,7 +283,7 @@ p[data-width="narrow"] {
     inset: 7rem var(--spacing-500) auto var(--spacing-500);
     padding-block: var(--spacing-700);
     border-radius: var(--spacing-200);
-    z-index: 100;
+    z-index: 999;
   }
   .primary-navigation ul {
     grid-auto-flow: row;
@@ -283,10 +291,12 @@ p[data-width="narrow"] {
     text-align: center;
     font-weight: var(--fw-bold);
   }
+
   .primary-header[data-overlay]::before {
     content: "";
     position: fixed;
     inset: 0;
+    z-index: 999;
     background-image: linear-gradient(transparent, rgba(0 0 0/ 0.8));
   }
 
@@ -319,6 +329,31 @@ p[data-width="narrow"] {
 .button[data-type="inverted"] {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-400);
+}
+
+/* ----hero section---- */
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -1;
+  top: 0;
+  width: 50vw;
+  max-height: 85vh;
+  aspect-ratio: 1/1.3;
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (width<=50em) {
+  .hero-image {
+    order: -1;
+  }
+  .hero-image::before {
+    width: 50%;
+  }
 }
 
 /* ------cta------ */
@@ -462,5 +497,54 @@ p[data-width="narrow"] {
     z-index: -1;
     grid-area: 1/1/2/3;
     box-shadow: 3rem 0 0 var(--clr-accent-100);
+  }
+}
+
+/* Slider */
+.testimonials-list {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: baseline;
+  column-gap: var(--spacing-500);
+  list-style: none;
+  text-align: center;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+.testimonial {
+  position: relative;
+  max-width: 371px;
+  margin-inline: auto;
+}
+.testimonials-text {
+  background-color: rgb(247, 247, 247);
+  padding: var(--spacing-400) var(--spacing-700);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: max-content;
+}
+.testimonials-image {
+  width: 4rem;
+  height: auto;
+  border-radius: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 1rem;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.testimonials-name {
+  margin-block-start: var(--spacing-600);
+}
+.testimonials-body {
+  color: var(--clr-neutral-300);
+}
+
+@media (width<50em) {
+  .testimonials-list {
+    grid-auto-flow: row;
   }
 }

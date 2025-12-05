@@ -10,3 +10,4 @@ mobileNav.addEventListener('click', ()=>{
     close.classList.toggle('show')
     header.toggleAttribute('data-overlay')
 })
+
