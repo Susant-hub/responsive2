@@ -1,1 +1,1 @@
-Live preview: https://benevolent-ganache-5c05be.netlify.app/
+Live preview: https://susantresponsive2.netlify.app
